@@ -1,6 +1,7 @@
 # Megascans Auth Token
-# Paste your Bearer token below (without the "Bearer " prefix)
-# You can find it in browser DevTools → Network → any quixel.com request → Authorization header
+# Paste your Authentification token below
+# You can generate it with the auth.js javascript file (same folder).
+# Login at megascans.com, hit F12 and in the Console paste that code and enter. Paste the result below
 # Tokens expire - update this when you get 401 errors
 
 ADD YOUR TOKEN HERE
