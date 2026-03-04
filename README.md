@@ -47,7 +47,8 @@ Copy the output line that appears.
 ### 5. Save Your Token
 Paste the copied token into `configuration/authentication.txt`, replacing the placeholder line that says `YOUR_TOKEN_HERE`.
 
-> ⚠️ **Tokens expire after a few hours.** You will need to repeat steps 3–5 each time you start a new download session.
+> ⚠️ **Tokens expire after a 24 hours or if you close the Browser you logged in with.** You will need to repeat steps 
+> 3–5 each > time you start a new download session.
 
 ---
 
