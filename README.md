@@ -1,7 +1,14 @@
 # Megascans Mass Downloader
 
-A Python script to bulk-download your purchased Megascans assets.
+A Python script to bulk-download your purchased Megascans assets.<br>
+This is a more advanced version of what can be found here: https://gist.github.com/aldenparker/0d8fee85469d3561bc3a772a03d642cb
 
+Additional features are
+- Download individual categories (3D Asset, Surface, Decal etc.)
+- Specify resolution for textures
+- Specify LOD levels for 3D assets
+- Retry failed downloads
+- Skip downloading certain texture maps
 ---
 
 ## Setup & Usage
