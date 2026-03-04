@@ -1,0 +1,13 @@
+{
+  "_comment": "Controls which LOD levels are downloaded for 3D assets.",
+  "_note": "LOD 0 = highest detail, higher numbers = lower detail / fewer triangles.",
+  "_lod_normals_comment": "LOD normal maps are downloaded only for the LOD levels listed in 'lods'.",
+  "_albedo_lods_comment": "Some assets have per-LOD albedo remaps (usually LOD4+). Set albedo_lods to include them.",
+
+  "lods": [0, 1, 2, 3, 4, 5],
+
+  "albedo_lods": true,
+  "mesh_mime_type": "application/x-fbx",
+
+  "_mesh_mime_type_options": ["application/x-fbx", "application/x-abc", "application/x-obj"]
+}

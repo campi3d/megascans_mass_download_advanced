@@ -1,0 +1,31 @@
+{
+  "_comment": "Texture type settings. Set 'enabled' to false to skip a type entirely.",
+  "_mimeType_options": ["image/jpeg", "image/x-exr"],
+  "_resolution_options": [8192, 4096, 2048, 1024],
+
+  "textures": [
+    { "type": "albedo",       "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "normal",       "mimeType": "image/x-exr", "resolution": 4096, "enabled": true  },
+    { "type": "displacement", "mimeType": "image/x-exr", "resolution": 4096, "enabled": true  },
+    { "type": "roughness",    "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "specular",     "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "bump",         "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "normalbump",   "mimeType": "image/x-exr", "resolution": 4096, "enabled": true  },
+    { "type": "cavity",       "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "gloss",        "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true  },
+    { "type": "ao",           "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true  },
+    { "type": "occlusion",    "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "diffuse",      "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "metalness",    "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "opacity",      "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "translucency", "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "transmission", "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "mask",         "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "fuzz",         "mimeType": "image/jpeg",  "resolution": 4096, "enabled": true  },
+    { "type": "curvature",    "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true  },
+    { "type": "normalobject", "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true  },
+    { "type": "thickness",    "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true  },
+    { "type": "brush",        "mimeType": "image/jpeg",  "resolution": 2048, "enabled": false },
+    { "type": "displacment",  "mimeType": "image/x-exr", "resolution": 4096, "enabled": true  }
+  ]
+}

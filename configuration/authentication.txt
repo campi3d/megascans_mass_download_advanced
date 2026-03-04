@@ -1,0 +1,6 @@
+# Megascans Auth Token
+# Paste your Bearer token below (without the "Bearer " prefix)
+# You can find it in browser DevTools → Network → any quixel.com request → Authorization header
+# Tokens expire - update this when you get 401 errors
+
+ADD YOUR TOKEN HERE
