@@ -26,12 +26,14 @@ texture_settings  = _load_json_settings("texture_settings.json",  "texture type/
 mesh_lod_settings = _load_json_settings("mesh_lod_settings.json", "mesh LOD settings")
 
 # Derive enabled LOD indices and mesh mime type from mesh_lod_settings
-enabled_lods      = mesh_lod_settings.get("lods", [0, 1, 2, 3, 4, 5])
-mesh_mime_type    = mesh_lod_settings.get("mesh_mime_type", "application/x-fbx")
-albedo_lods_flag  = mesh_lod_settings.get("albedo_lods", True)
+enabled_lods        = mesh_lod_settings.get("lods", [0, 1, 2, 3, 4, 5])
+mesh_mime_type      = mesh_lod_settings.get("mesh_mime_type", "application/x-fbx")
+albedo_lods_flag    = mesh_lod_settings.get("albedo_lods", True)
+include_highres     = mesh_lod_settings.get("include_highres", False)
+include_ztool       = mesh_lod_settings.get("include_ztool", False)
 
 print(f"-> Texture settings: {len([t for t in texture_settings['textures'] if t.get('enabled',True)])} types enabled")
-print(f"-> Mesh LODs: {enabled_lods} | format: {mesh_mime_type}")
+print(f"-> Mesh LODs: {enabled_lods} | format: {mesh_mime_type} | highres: {include_highres} | ztool: {include_ztool}")
 
 # ---------------------------------------------------------------
 # 1. Set auth token, get cache, and init tracker variables
@@ -726,8 +728,8 @@ def downloadAsset(id):
 
             base_config = {
                 "meshMimeType": mesh_mime_type,
-                "highpoly": False,
-                "ztool": False,
+                "highpoly": include_highres,
+                "ztool": include_ztool,
                 "lowerlod_normals": True,
                 "albedo_lods": albedo_lods_flag,
                 "lods": lod_tris,
@@ -1364,7 +1366,7 @@ if available_types:
     if has_failed:
         print(f"   {len(available_types) + 2}. download_failed ({len(failed_ids)} assets)")
 else:
-    print("\n-> No categorized asset files found in './asset_types/'")
+    print(f"\n-> No categorized asset files found in '{ASSET_TYPES_DIR}'")
     print("-> Will fetch all assets from API")
     if has_failed:
         print(f"   1. download_failed ({len(failed_ids)} assets)")

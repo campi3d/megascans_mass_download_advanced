@@ -1,14 +1,6 @@
 # Megascans Mass Downloader
 
 A Python script to bulk-download your purchased Megascans assets.
-This is a more advanced version of what can be found here: https://gist.github.com/aldenparker/0d8fee85469d3561bc3a772a03d642cb
-
-Additional features are
-- Download individual categories (3D Asset, Surface, Decal etc.)
-- Specify resolution for textures
-- Specify LOD levels for 3D assets
-- Retry failed downloads
-- Skip downloading certain texture maps
 
 ---
 
@@ -69,8 +61,8 @@ The script will ask you a few questions at startup:
 - **Number of workers** — the number of simultaneous download threads (default: **4**)
 
 > 💡 **On workers:** increasing the worker count can speed things up significantly, since the script makes multiple 
-> server requests per asset to resolve download info. You can go as high as matching the number of CPU cores you have 
-> available (which will max your system out though).
+> server requests per asset to resolve download info. You can go as high as to match the number of CPU cores you have 
+> available (which maxes out your system)
 
 ---
 
@@ -112,6 +104,8 @@ Controls which LOD levels are downloaded for 3D assets.
 {
   "lods": [0, 1, 2, 3, 4, 5],
   "albedo_lods": true,
+  "include_highres": false,
+  "include_ztool": false,
   "mesh_mime_type": "application/x-fbx"
 }
 ```
@@ -120,6 +114,8 @@ Controls which LOD levels are downloaded for 3D assets.
 |---|---|---|
 | `lods` | Array of integers | Which LOD levels to include. LOD 0 = highest detail |
 | `albedo_lods` | `true` / `false` | Include per-LOD albedo remaps (typically LOD 4+) |
+| `include_highres` | `true` / `false` | Download the raw high-resolution scan mesh (`_High.fbx`). Very large file — not needed for game/realtime use |
+| `include_ztool` | `true` / `false` | Download the ZBrush `.ztl` sculpt file if available for the asset |
 | `mesh_mime_type` | `application/x-fbx`, `application/x-abc`, `application/x-obj` | Mesh file format |
 
 > **Example:** setting `"lods": [0, 1, 2]` downloads only the three highest-detail LODs and automatically excludes the LOD 3/4/5 normal maps.
