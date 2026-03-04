@@ -2,6 +2,6 @@
 # Paste your Authentification token below
 # You can generate it with the auth.js javascript file (same folder).
 # Login at megascans.com, hit F12 and in the Console paste that code and enter. Paste the result below
-# Tokens expire - update this when you get 401 errors
+# Tokens expire if you close the Browser Page or after 24 hours - update this when you get 401 errors
 
 ADD YOUR TOKEN HERE
