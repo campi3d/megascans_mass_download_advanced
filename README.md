@@ -68,7 +68,9 @@ The script will ask you a few questions at startup:
 - **How many assets** — enter a number or `ALL`
 - **Number of workers** — the number of simultaneous download threads (default: **4**)
 
-> 💡 **On workers:** increasing the worker count can speed things up significantly, since the script makes multiple server requests per asset to resolve download info. A good rule of thumb is to match the number of CPU cores you have available.
+> 💡 **On workers:** increasing the worker count can speed things up significantly, since the script makes multiple 
+> server requests per asset to resolve download info. You can go as high as matching the number of CPU cores you have 
+> available (which will max your system out though).
 
 ---
 
