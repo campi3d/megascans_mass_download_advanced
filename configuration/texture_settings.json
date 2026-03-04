@@ -25,7 +25,7 @@
     { "type": "curvature",    "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true  },
     { "type": "normalobject", "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true  },
     { "type": "thickness",    "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true  },
-    { "type": "brush",        "mimeType": "image/jpeg",  "resolution": 2048, "enabled": false },
+    { "type": "brush",        "mimeType": "image/jpeg",  "resolution": 2048, "enabled": true },
     { "type": "displacment",  "mimeType": "image/x-exr", "resolution": 4096, "enabled": true  }
   ]
 }
